@@ -3,7 +3,6 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
-foo original
 
 <div class="container">
     <h2> Diseño mecánico </h2>
@@ -12,6 +11,9 @@ foo original
             <tr>
                 <th>Análisis y simuación</th>
                 <th>Diseño de maquinaria y equipo industrial</th>
+                <th>Robotica</th>
+                <th>Manufacura</th>
+                <th>Maquinas y herramientas</th>
             </tr>
                    
         </thead>
