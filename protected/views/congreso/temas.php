@@ -6,7 +6,7 @@ $this->pageTitle=Yii::app()->name;
 
 <div class="container">
     <h2> Diseño mecánico </h2>
-    <table class="table-bordered"> 
+    <table class="table table-bordered"> 
         <thead>
             <tr>
                 <th>Análisis y simuación</th>
