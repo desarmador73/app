@@ -3,4 +3,4 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
-foo seis siete
+foo original
