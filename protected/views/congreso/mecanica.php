@@ -19,6 +19,7 @@ $this->pageTitle=Yii::app()->name;
         
     </div>
     <div class="col-sm-4">
+        <h3> </h3>
         <p></p>
     </div>    
     
