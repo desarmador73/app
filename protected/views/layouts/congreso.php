@@ -34,25 +34,24 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="#" style="text-align: center">Inicio</a></li>
+                        <li>
+                            <?php echo CHtml::link('Inicio', array('congreso/index'), array('style'=>'text-align: center')); ?>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle"
                                data-toggle="dropdown"
                                role="button"
-                               id="menu1"
+                               id="menu2"
                                aria-haspopup="true"
                                aria-expanded="false"
-                               style="text-align: center">Programa<br>cientifico
-<!--                                <span class="caret"></span>-->
+                               style="text-align: center">Programa cientifico SOMIM<br>e Iberomat
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="menu1">
-                                <li><a href="#">Topicos</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="menu2">
+                                <li>
+                                    <?php echo CHtml::link('Temas', array('congreso/temas')); ?>
+                                </li>
+                                <li><a href="#">Las sociedades SOMIM e Iberomat</a></li>
+                                <li><a href="#">Conferencias magistrales</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -63,18 +62,14 @@
                                aria-haspopup="true"
                                aria-expanded="false"
                                style="text-align: center">Envio<br>de articulos
-<!--                                <span class="caret"></span>-->
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="menu2">
-                                <li><a href="#">Topicos</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="#">Instrucciones ingreso al congreso</a></li>
+                                <li><a href="#">Lineamientos</a></li>
+                                <li><a href="#">Registro</a></li>
                             </ul>
                         </li>
+
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle"
                                data-toggle="dropdown"
@@ -83,16 +78,11 @@
                                aria-haspopup="true"
                                aria-expanded="false"
                                style="text-align: center">Registro<br>al congreso
-<!--                                <span class="caret"></span>-->
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="menu2">
-                                <li><a href="#">Topicos</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="#">Cuotas</a></li>
+                                <li><a href="#">Pida nombre</a></li>
+                                <li><a href="#">Lineamientos</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -106,13 +96,9 @@
 <!--                                <span class="caret"></span>-->
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="menu3">
-                                <li><a href="#">Topicos</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="#">Hotel sede</a></li>
+                                <li><a href="#">Cuotas</a></li>
+                                <li><a href="#">Descripción</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -122,37 +108,12 @@
                                id="menu3"
                                aria-haspopup="true"
                                aria-expanded="false"
-                               style="text-align: center">Punto<br>de encuentro
+                               style="text-align: center">Sede
                                 <!--                                <span class="caret"></span>-->
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="menu3">
-                                <li><a href="#">Topicos</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"
-                               data-toggle="dropdown"
-                               role="button"
-                               id="menu3"
-                               aria-haspopup="true"
-                               aria-expanded="false"
-                               style="text-align: center">Exposisión
-                                <!--                                <span class="caret"></span>-->
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="menu3">
-                                <li><a href="#">Topicos</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="#">¿Cómo llegar?</a></li>
+                                <li><a href="#">Transporte</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -163,17 +124,16 @@
                                aria-haspopup="true"
                                aria-expanded="false"
                                style="text-align: center">Comité
-                                <!--                                <span class="caret"></span>-->
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="menu3">
-                                <li><a href="#">Topicos</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
+<!--                            <ul class="dropdown-menu" aria-labelledby="menu3">-->
+<!--                                <li><a href="#">Topicos</a></li>-->
+<!--                                <li><a href="#">Another action</a></li>-->
+<!--                                <li><a href="#">Something else here</a></li>-->
+<!--                                <li role="separator" class="divider"></li>-->
+<!--                                <li class="dropdown-header">Nav header</li>-->
+<!--                                <li><a href="#">Separated link</a></li>-->
+<!--                                <li><a href="#">One more separated link</a></li>-->
+<!--                            </ul>-->
                         </li>
                     </ul>
                 </div>
