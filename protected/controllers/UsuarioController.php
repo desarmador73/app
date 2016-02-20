@@ -26,10 +26,13 @@ class UsuarioController extends Controller
             $model->attributes = $_POST['DatosgralForm'];
             $valid = $model->validate();
             Yii::log('submit -> '.print_r($_POST, true));
-
-            if($valid)
+            Yii::log('model->attributes -> '.print_r($model->attributes, true));
+            if($model->validate())
             {
                 $model->guardaDatosGenerales(Commons::miembroActivo()->idmiembro);
+            } else {
+                CVarDumper::dump($model->getErrors(),5678,true);
+                Yii::app()->end();
             }
         }
 

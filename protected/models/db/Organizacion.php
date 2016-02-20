@@ -56,8 +56,8 @@ class Organizacion extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idorganizacion' => 'Idorganizacion',
-			'descorganizacion' => 'Descorganizacion',
+			'idorganizacion' => 'id',
+			'descorganizacion' => 'Descripcion',
 			'estado' => 'Estado',
 		);
 	}

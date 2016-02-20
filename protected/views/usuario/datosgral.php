@@ -84,10 +84,17 @@ $this->breadcrumbs=array(
                     $model,
                     'org',
                     CHtml::listData(Organizacion::model()->findAll(), 'idorganizacion', 'descorganizacion'),
-                    array('prompt'=>'Select',
+                    array('prompt'=>'Seleccione...',
                         'class'=>'form-control input-sm')
                 ); ?>
             </div>
+            <div class="col-md-6">
+                <?php echo CHtml::activeLabel($model,'otro'); ?>
+                <?php echo CHtml::activeTextField($model,'otro',
+                    array('class'=>'form-control input-sm')) ?>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
                 <?php echo CHtml::activeLabel($model,'dep'); ?>
                 <?php echo CHtml::activeTextField($model,'dep',
@@ -144,7 +151,7 @@ $this->breadcrumbs=array(
                     $model,
                     'pais',
                     CHtml::listData(Pais::model()->findAll(), 'idpais', 'descpais'),
-                    array('prompt'=>'Select',
+                    array('prompt'=>'Seleccione...',
                         'class'=>'form-control input-sm')
                 ); ?>
             </div>
