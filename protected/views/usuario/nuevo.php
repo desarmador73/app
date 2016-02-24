@@ -1,20 +1,26 @@
 <?php
-/* @var $this SiteController */
+/* @var $this UsuarioController */
 
 $this->pageTitle=Yii::app()->name;
 
 $this->breadcrumbs=array(
-    'Datos personales',
+    'Registro nuevo',
 );
 ?>
-
+<?php if(Yii::app()->user->hasFlash('danger')): ?>
+    <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php echo Yii::app()->user->getFlash('danger'); ?>
+    </div>
+<?php endif; ?>
 <?php $form=$this->beginWidget(
     'CActiveForm',
     array(
-        'id' => 'datosper-form',
+        'id' => 'newuser-form',
         'enableAjaxValidation' => true,
         'enableClientValidation'=>true,
-        'htmlOptions'=>array(),
+//        'htmlOptions'=>array(),
+        'focus'=>array($model, 'apepat')
     )
 );?>
 <fieldset>
@@ -74,10 +80,17 @@ $this->breadcrumbs=array(
                 $model,
                 'org',
                 CHtml::listData(Organizacion::model()->findAll(), 'idorganizacion', 'descorganizacion'),
-                array('prompt'=>'Select',
+                array('prompt'=>'Seleccione...',
                     'class'=>'form-control input-sm')
             ); ?>
         </div>
+        <div class="col-md-6">
+            <?php echo CHtml::activeLabel($model,'otro'); ?>
+            <?php echo CHtml::activeTextField($model,'otro',
+                array('class'=>'form-control input-sm')) ?>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-6">
             <?php echo CHtml::activeLabel($model,'dep'); ?>
             <?php echo CHtml::activeTextField($model,'dep',

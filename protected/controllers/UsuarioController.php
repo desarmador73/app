@@ -31,8 +31,8 @@ class UsuarioController extends Controller
             {
                 $model->guardaDatosGenerales(Commons::miembroActivo()->idmiembro);
             } else {
-                CVarDumper::dump($model->getErrors(),5678,true);
-                Yii::app()->end();
+//                CVarDumper::dump($model->getErrors(),5678,true);
+//                Yii::app()->end();
             }
         }
 
@@ -53,6 +53,22 @@ class UsuarioController extends Controller
     public function actionNuevo()
     {
         $model = new NewForm();
+        if(isset($_POST['NewForm']))
+        {
+//            $valid = true;
+
+            $model->attributes = $_POST['NewForm'];
+            $valid = $model->validate();
+            Yii::log('submit -> '.print_r($_POST, true));
+            Yii::log('model->attributes -> '.print_r($model->attributes, true));
+            if($model->validate())
+            {
+                $model->guardaDatosGenerales();
+            } else {
+                //CVarDumper::dump($model->getErrors(),5678,true);
+                //Yii::app()->end();
+            }
+        }
 
         $this->render('nuevo',
             array('model' => $model));
