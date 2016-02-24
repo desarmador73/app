@@ -84,10 +84,7 @@ class NewForm extends CFormModel
     {
         $transaction = Yii::app()->db->beginTransaction();
         try {
-            $miembro = Miembro::model()->find('idmiembro=' . $idmiembro);
-            if ($miembro == null) {
-                $miembro = new Miembro();
-            }
+            $miembro = new Miembro();
             $miembro->apepat = $this->apepat;
             $miembro->apemat = $this->apemat;
             $miembro->nombre = $this->nombre;
@@ -100,30 +97,25 @@ class NewForm extends CFormModel
             $miembro->areaespecial = $this->areaespe;
             $miembro->estado = '1';
             $miembro->password = $this->passw;
-            Yii::log('save miembro ' . $miembro->save());
+            $miembro->idtipomiembro = 3; //Asociado
+            Yii::log('insert miembro ' . $miembro->insert());
             /*
              *
              */
-            $datosacad = Datosacad::model()->find('idmiembro='.$idmiembro);
-            if ($datosacad === null) {
-                $datosacad = new Datosacad();
-            }
+            $datosacad = new Datosacad();
             $datosacad = new Datosacad();
             $datosacad->idorganizacion = Organizacion::model()->
-            find('idorganizacion=' . $this->org)->idorganizacion;
+                find('idorganizacion=' . $this->org)->idorganizacion;
             $datosacad->idmiembro = $miembro->idmiembro;
             $datosacad->dependencia = $this->dep;
             $datosacad->departamento = $this->dep;
             $datosacad->otro = $this->otro;
             //Yii::log('datosacad ' . print_r($datosacad, true));
-            Yii::log('save datosacad ' . $datosacad->save());
+            Yii::log('insert datosacad ' . $datosacad->insert());
             /*
              *
              */
-            $dommiembro = Dommiembro::model()->find('idmiembro='.$idmiembro);
-            if($dommiembro === null) {
-                $dommiembro = new Dommiembro();
-            }
+            $dommiembro = new Dommiembro();
             $dommiembro->calle = $this->calle;
             $dommiembro->numero = $this->numero;
             $dommiembro->colonia = $this->colonia;
@@ -132,25 +124,18 @@ class NewForm extends CFormModel
             $dommiembro->estado = $this->estado;
             $dommiembro->codpostal = $this->codpostal;
             $dommiembro->idpais = Pais::model()->
-            find('idpais='.$this->pais)->idpais;
+                find('idpais='.$this->pais)->idpais;
             $dommiembro->idmiembro = $miembro->idmiembro;
-            Yii::log('save dommiembro ' . $dommiembro->save());
+            Yii::log('insert dommiembro ' . $dommiembro->insert());
             /*
              *
              */
-            $areainteresmiembro = Areainteresmiembro::model()->findAll(
-                'idmiembro='.$idmiembro . " AND estado='1'");
-            // Limpia los datos anteriores
-            foreach($areainteresmiembro as $item) {
-                $item->delete();
-            }
-
             foreach($this->campoint as $item) {
                 $aux = new Areainteresmiembro();
                 $aux->idmiembro = $miembro->idmiembro;
                 $aux->idareainteres = $item;
                 $aux->estado = '1';
-                Yii::log('save areainteresmiembro ' . $aux->insert());
+                Yii::log('insert areainteresmiembro ' . $aux->insert());
             }
             /*
              *

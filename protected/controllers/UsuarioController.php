@@ -65,8 +65,8 @@ class UsuarioController extends Controller
             {
                 $model->guardaDatosGenerales();
             } else {
-                //CVarDumper::dump($model->getErrors(),5678,true);
-                //Yii::app()->end();
+//                CVarDumper::dump($model->getErrors(),5678,true);
+//                Yii::app()->end();
             }
         }
 
