@@ -44,13 +44,13 @@
                                id="menu2"
                                aria-haspopup="true"
                                aria-expanded="false"
-                               style="text-align: center">Programa cientifico SOMIM<br>e Iberomat
+                               style="text-align: center">Programa cientifico SOMIM<br>e IBEROMAT
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="menu2">
                                 <li>
                                     <?php echo CHtml::link('Temas', array('congreso/temas')); ?>
                                 </li>
-                                <li><a href="#">Las sociedades SOMIM e Iberomat</a></li>
+                                <li><a href="#">La sociedad SOMIM e IBEROMAT</a></li>
                                 <li><a href="#">Conferencias magistrales</a></li>
                             </ul>
                         </li>
@@ -158,9 +158,9 @@
                  src="<?php echo Yii::app()->baseUrl.'/images/16179731422_7606f23825_k.jpg'; ?>" alt="First slide">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Ejemplo Uno.</h1>
-                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                    <h1>SOMIM 2016</h1>
+<!--                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>-->
+<!--                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>-->
                 </div>
             </div>
         </div>
@@ -169,20 +169,9 @@
                  src="<?php echo Yii::app()->baseUrl.'/images/10066847454_ec50ad4305_k.jpg'; ?>" alt="Second slide">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Ejemplo Dos.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="third-slide"
-                 src="<?php echo Yii::app()->baseUrl.'/images/6340339408_9bbe78bb02_b.jpg'; ?>" alt="Third slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Ejemplo tres.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                    <h1>IBEROMAT 2016</h1>
+<!--                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+<!--                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
                 </div>
             </div>
         </div>
@@ -207,7 +196,7 @@
     <!-- FOOTER -->
     <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2015 SOMIM, A.C. &middot;</p>
     </footer>
 
 </div><!-- /.container -->

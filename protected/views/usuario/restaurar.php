@@ -1,5 +1,5 @@
 <?php
-/* @var $this SiteController */
+/* @var $this UsuarioController */
 
 $this->pageTitle=Yii::app()->name;
 
@@ -7,6 +7,12 @@ $this->breadcrumbs=array(
     'Datos personales',
 );
 ?>
+<?php if(Yii::app()->user->hasFlash('danger')): ?>
+    <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php echo Yii::app()->user->getFlash('danger'); ?>
+    </div>
+<?php endif; ?>
 <?php $form=$this->beginWidget(
     'CActiveForm',
     array(

@@ -74,10 +74,23 @@ class UsuarioController extends Controller
             array('model' => $model));
     }
 
+    /*
+     *
+     */
     public function actionRestaurar()
     {
         $model = new RecoveryForm();
 
+        if(isset($_POST['RecoveryForm']))
+        {
+            Yii::log('submit -> '.print_r($_POST, true));
+            $model->attributes = $_POST['RecoveryForm'];
+            $idmiembro = $model->buscaEmailMiembro($model->email);
+            if($model->validate())
+            {
+                $model->enviarCorreo($idmiembro);
+            }
+        }
         $this->render('restaurar',
             array('model' => $model));
     }

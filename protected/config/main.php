@@ -135,9 +135,9 @@ return array(
 			'class' => 'ext.yii-mail.YiiMail',
 			'transportType'=>'smtp',
 			'transportOptions'=>array(
-				'host'=>'smtp.gmail.com',
-				'username'=>'esalazarmigueles@gmail.com',
-				'password'=>'N1$h1k1n#',
+				'host'=>'mail.somim2.org',
+				'username'=>'root@somim2.org',
+				'password'=>'Rut1l1oBlaBla',
 				'port'=>'465',
 				'encryption' => 'tls',
 			),
