@@ -4,11 +4,12 @@
  * This is the model class for table "datosacad".
  *
  * The followings are the available columns in table 'datosacad':
- * @property integer $iddatosacad
- * @property integer $idorganizacion
- * @property integer $idmiembro
- * @property string $dependencia
- * @property string $departamento
+ * @property integer	$iddatosacad
+ * @property integer 	$idorganizacion
+ * @property integer 	$idmiembro
+ * @property string 	$dependencia
+ * @property string 	$departamento
+ * @property string 	$otro
  *
  * The followings are the available model relations:
  * @property Miembro $idmiembro0
@@ -34,10 +35,10 @@ class Datosacad extends CActiveRecord
 		return array(
 			array('idorganizacion, idmiembro', 'required'),
 			array('idorganizacion, idmiembro', 'numerical', 'integerOnly'=>true),
-			array('dependencia, departamento', 'length', 'max'=>45),
+			array('dependencia, departamento, otro', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('iddatosacad, idorganizacion, idmiembro, dependencia, departamento', 'safe', 'on'=>'search'),
+			array('iddatosacad, idorganizacion, idmiembro, dependencia, departamento, otro', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,6 +66,7 @@ class Datosacad extends CActiveRecord
 			'idmiembro' => 'Idmiembro',
 			'dependencia' => 'Dependencia',
 			'departamento' => 'Departamento',
+			'otro' => 'Otra org'
 		);
 	}
 
@@ -91,6 +93,7 @@ class Datosacad extends CActiveRecord
 		$criteria->compare('idmiembro',$this->idmiembro);
 		$criteria->compare('dependencia',$this->dependencia,true);
 		$criteria->compare('departamento',$this->departamento,true);
+		$criteria->compare('otro',$this->otro,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

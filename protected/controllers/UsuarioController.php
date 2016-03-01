@@ -26,10 +26,13 @@ class UsuarioController extends Controller
             $model->attributes = $_POST['DatosgralForm'];
             $valid = $model->validate();
             Yii::log('submit -> '.print_r($_POST, true));
-
-            if($valid)
+            Yii::log('model->attributes -> '.print_r($model->attributes, true));
+            if($model->validate())
             {
                 $model->guardaDatosGenerales(Commons::miembroActivo()->idmiembro);
+            } else {
+//                CVarDumper::dump($model->getErrors(),5678,true);
+//                Yii::app()->end();
             }
         }
 
@@ -50,15 +53,44 @@ class UsuarioController extends Controller
     public function actionNuevo()
     {
         $model = new NewForm();
+        if(isset($_POST['NewForm']))
+        {
+//            $valid = true;
+
+            $model->attributes = $_POST['NewForm'];
+            $valid = $model->validate();
+            Yii::log('submit -> '.print_r($_POST, true));
+            Yii::log('model->attributes -> '.print_r($model->attributes, true));
+            if($model->validate())
+            {
+                $model->guardaDatosGenerales();
+            } else {
+//                CVarDumper::dump($model->getErrors(),5678,true);
+//                Yii::app()->end();
+            }
+        }
 
         $this->render('nuevo',
             array('model' => $model));
     }
 
+    /*
+     *
+     */
     public function actionRestaurar()
     {
         $model = new RecoveryForm();
 
+        if(isset($_POST['RecoveryForm']))
+        {
+            Yii::log('submit -> '.print_r($_POST, true));
+            $model->attributes = $_POST['RecoveryForm'];
+            $idmiembro = $model->buscaEmailMiembro($model->email);
+            if($model->validate())
+            {
+                $model->enviarCorreo($idmiembro);
+            }
+        }
         $this->render('restaurar',
             array('model' => $model));
     }

@@ -31,4 +31,9 @@ class CongresoController extends Controller
     {
         $this->render('index');
     }
+
+    public function actionTemas()
+    {
+        $this->render('temas');
+    }
 }
