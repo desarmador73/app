@@ -5,14 +5,14 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 <div class="container">
-    <h2> Diseño mecánico </h2>
+    <h2> Diseño Mecánico </h2>
     <table class="table table-bordered"> 
         <thead>
             <tr>
-             <th class="h4">Análisis y simuación</th>
+             <th>Análisis y Simulación</th>
             </tr>
             <tr>
-                <th>Diseño de maquinaria y equipo industrial</th>
+                <th>Diseño de Maquinaria y Equipo Industrial</th>
             </tr>
             <tr>
                 <th>Robotica</th>
@@ -21,7 +21,7 @@ $this->pageTitle=Yii::app()->name;
                 <th>Manufacura</th>
             </tr>
             <tr>
-                <th>Maquinas y herramientas</th>
+                <th>Maquinas y Herramientas</th>
             </tr>
                    
         </thead>
@@ -54,7 +54,7 @@ $this->pageTitle=Yii::app()->name;
     <table class="table table-bordered"> 
         <thead>
             <tr>
-             <th>Análisis experimental</th>
+             <th>Análisis Experimental</th>
             </tr>
             <tr>
                 <th>Diseño de Maquinaria y Equipo Industrial</th>
@@ -106,7 +106,7 @@ $this->pageTitle=Yii::app()->name;
                 <th>Equipo Experimental</th>
             </tr>
             <tr>
-                <th>Herramientas Didacticas y Pedagogia</th>
+                <th>Herramientas Didácticas y Pedagogía</th>
             </tr>
         </thead>
     </table>
